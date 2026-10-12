@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+
+    <div class="col-md-4 text-center mb-4">
+        <img src="{{ url_for('static', filename='images/avatar.png') }}" class="profile-img mb-3">
+        <h2>{{ name }}</h2>
+        <p class="text-muted">Junior Python Developer</p>
+    </div>
+
+    <div class="col-md-8">
+        <section class="card mb-3 p-3 shadow-sm">
+            <h3>Про себе</h3>
+            <p>Студент, який вчиться розробляти додатки на Python та опановує веб-фреймворки.</p>
+        </section>
+
+        <section class="card mb-3 p-3 shadow-sm">
+            <h3>Освіта</h3>
+            <p><strong>Університет:</strong> Спеціальність "Інженерія програмного забезпечення"</p>
+        </section>
+
+        <section class="card mb-3 p-3 shadow-sm">
+            <h3>Навички та Технології</h3>
+            <ul class="list-group list-group-flush">
+                {% for skill in skills %}
+                <li class="list-group-item">{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="card mb-3 p-3 shadow-sm">
+            <h3>Проєкти</h3>
+            {% for project in projects %}
+            <div class="mb-2">
+                <h5>{{ project.name }}</h5>
+                <p class="text-secondary mb-1">{{ project.desc }}</p>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+</div>
+{% endblock %}
