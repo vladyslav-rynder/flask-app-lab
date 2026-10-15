@@ -1,8 +1,32 @@
+from datetime import datetime, timedelta
 from app.users import user_bp
-from flask import abort, flash, redirect, render_template, request, session, url_for
+from flask import (
+    abort,
+    flash,
+    make_response,
+    redirect,
+    render_template,
+    request,
+    session,
+    url_for,
+)
 
 # Заглушка
 USER_DATA = {'username': 'user1', 'password': '123'}
+
+@user_bp.route('/hi/<string:name>')
+def greetings(name):
+    name = name.upper()
+    age = request.args.get('age', None, int)
+    return render_template('hi.html', name=name, age=age)
+
+@user_bp.route('/admin')
+def admin():
+    to_url = url_for(
+        'users.greetings', name='administrator', age=45, _external=True
+    )
+    print(to_url)
+    return redirect(to_url)
 
 @user_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -35,16 +59,58 @@ def logout():
     flash('Ви вийшли із системи.', 'success')
     return redirect(url_for('users.login'))
 
-@user_bp.route('/hi/<string:name>')
-def greetings(name):
-    name = name.upper()
-    age = request.args.get('age', None, int)
-    return render_template('hi.html', name=name, age=age)
+@user_bp.route('/profile/add_cookie', methods=['POST'])
+def add_cookie():
+    if 'username' not in session:
+        flash('Будь ласка, увійдіть у систему.', 'error')
+        return redirect(url_for('users.login'))
 
-@user_bp.route('/admin')
-def admin():
-    to_url = url_for(
-        'users.greetings', name='administrator', age=45, _external=True
-    )
-    print(to_url)
-    return redirect(to_url)
+    key = request.form.get('cookie_key')
+    value = request.form.get('cookie_value')
+    max_age = request.form.get('cookie_max_age')
+
+    if not key or not value:
+        flash("Ключ і значення куки обов'язкові!", 'error')
+        return redirect(url_for('users.profile'))
+
+    response = make_response(redirect(url_for('users.profile')))
+
+    try:
+        max_age_seconds = int(max_age) if max_age else 60 * 60 * 24 * 30  # за замовчуванням 30 днів
+        response.set_cookie(key, value, max_age=max_age_seconds)
+        flash(f"Кука '{key}' успішно додана!", 'success')
+    except ValueError:
+        flash('Термін дії має бути числом (у секундах)!', 'error')
+
+    return response
+
+
+@user_bp.route('/profile/delete_cookie', methods=['POST'])
+def delete_cookie():
+    if 'username' not in session:
+        flash('Будь ласка, увійдіть у систему.', 'error')
+        return redirect(url_for('users.login'))
+
+    key = request.form.get('delete_key')
+    if not key:
+        flash('Вкажіть ключ куки для видалення!', 'error')
+        return redirect(url_for('users.profile'))
+
+    response = make_response(redirect(url_for('users.profile')))
+    response.delete_cookie(key)
+    flash(f"Кука '{key}' успішно видалена!", 'success')
+    return response
+
+
+@user_bp.route('/profile/delete_all_cookies', methods=['POST'])
+def delete_all_cookies():
+    if 'username' not in session:
+        flash('Будь ласка, увійдіть у систему.', 'error')
+        return redirect(url_for('users.login'))
+
+    response = make_response(redirect(url_for('users.profile')))
+    for cookie_name in request.cookies.keys():
+        response.delete_cookie(cookie_name)
+
+    flash('Усі кукі успішно видалено!', 'success')
+    return response

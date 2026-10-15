@@ -14,4 +14,73 @@
         <a href="{{ url_for('users.logout') }}" class="btn btn-danger">Вийти</a>
     </div>
 </div>
+
+<!-- Додати кукі -->
+<div class="card p-4 shadow-sm mb-4">
+    <h4 class="mb-3">Додати кукі:</h4>
+    <form action="{{ url_for('users.add_cookie') }}" method="POST">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="cookie_key" class="form-label">Ключ кукі</label>
+                <input type="text" class="form-control" id="cookie_key" name="cookie_key" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="cookie_value" class="form-label">Значення кукі</label>
+                <input type="text" class="form-control" id="cookie_value" name="cookie_value" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="cookie_max_age" class="form-label">Термін дії (сек)</label>
+                <input type="number" class="form-control" id="cookie_max_age" name="cookie_max_age" placeholder="наприклад, 3600">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Додати кукі</button>
+    </form>
+</div>
+
+<!-- Видалити кукі за ключем -->
+<div class="card p-4 shadow-sm mb-4">
+    <h4 class="mb-3">Видалити кукі за ключем:</h4>
+    <form action="{{ url_for('users.delete_cookie') }}" method="POST">
+        <div class="mb-3">
+            <label for="delete_key" class="form-label">Ключ кукі для видалення:</label>
+            <input type="text" class="form-control" id="delete_key" name="delete_key" required>
+        </div>
+        <button type="submit" class="btn btn-warning text-dark">Видалити кукі за ключем</button>
+    </form>
+</div>
+
+<!-- Видалити всі кукі -->
+<div class="card p-4 shadow-sm mb-4">
+    <h4 class="mb-3">Видалити всі кукі:</h4>
+    <form action="{{ url_for('users.delete_all_cookies') }}" method="POST">
+        <button type="submit" class="btn btn-danger">Видалити всі кукі</button>
+    </form>
+</div>
+
+<!-- Список всіх кукі -->
+<div class="card p-4 shadow-sm mb-4">
+    <h4 class="mb-3">Список всіх кукі:</h4>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Ключ</th>
+            <th>Значення</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if request.cookies %}
+        {% for key, value in request.cookies.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td class="text-break">{{ value }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="2" class="text-center text-muted">Немає збережених кукі</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
