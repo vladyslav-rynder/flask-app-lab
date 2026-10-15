@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-3 text-primary">Сторінка Homepage</h2>
+            <p class="lead">Це спеціальна сторінка для перевірки параметрів клієнта.</p>
+            <hr>
+            <h5 class="mt-3">Інформація про твій браузер (User Agent):</h5>
+            <div class="alert alert-secondary text-break" role="alert">
+                <code>{{ agent }}</code>
+            </div>
+            <a href="{{ url_for('main') }}" class="btn btn-outline-secondary mt-3">На головну</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
