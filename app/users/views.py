@@ -47,11 +47,15 @@ def login():
 @user_bp.route('/profile')
 def profile():
     if 'username' not in session:
-        flash("Будь ласка, увійдіть у систему.", 'error')
+        flash('Будь ласка, увійдіть у систему.', 'error')
         return redirect(url_for('users.login'))
 
     username = session['username']
-    return render_template('profile.html', username=username)
+    current_theme = request.cookies.get('user_theme', 'light')
+
+    return render_template(
+        'profile.html', username=username, current_theme=current_theme
+    )
 
 @user_bp.route('/logout')
 def logout():
@@ -113,4 +117,15 @@ def delete_all_cookies():
         response.delete_cookie(cookie_name)
 
     flash('Усі кукі успішно видалено!', 'success')
+    return response
+
+@user_bp.route('/profile/set_theme/<theme_name>')
+def set_theme(theme_name):
+    allowed_themes = ['light', 'dark', 'primary']
+    if theme_name not in allowed_themes:
+        theme_name = 'light'
+
+    response = make_response(redirect(url_for('users.profile')))
+    response.set_cookie('user_theme', theme_name, max_age=60 * 60 * 24 * 30)
+    flash(f"Кольорову схему змінено на '{theme_name}'!", 'success')
     return response
