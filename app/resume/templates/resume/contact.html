@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% from "_render_field.html" import render_field %}
+
+{% block title %}Контакти{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+            <h2 class="text-center mb-4">Зворотний зв'язок</h2>
+
+            <form method="POST" novalidate>
+                {{ form.hidden_tag() }}
+
+                {{ render_field(form.name) }}
+                {{ render_field(form.email) }}
+                {{ render_field(form.phone) }}
+                {{ render_field(form.subject) }}
+                {{ render_field(form.message) }}
+
+                <div class="d-grid">
+                    {{ form.submit(class="btn btn-dark") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
