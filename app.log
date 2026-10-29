@@ -1,0 +1,157 @@
+2026-10-29 14:23:55,907 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:23:55,907 - INFO - Press CTRL+C to quit
+2026-10-29 14:23:55,908 - INFO -  * Restarting with stat
+2026-10-29 14:23:56,228 - WARNING -  * Debugger is active!
+2026-10-29 14:23:56,231 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:24:00,119 - INFO - 127.0.0.1 - - [29/Oct/2026 14:24:00] "GET / HTTP/1.1" 500 -
+2026-10-29 14:24:00,256 - INFO - 127.0.0.1 - - [29/Oct/2026 14:24:00] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+2026-10-29 14:24:00,260 - INFO - 127.0.0.1 - - [29/Oct/2026 14:24:00] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+2026-10-29 14:24:00,293 - INFO - 127.0.0.1 - - [29/Oct/2026 14:24:00] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=cUYtCjjYzVIC3EzoSsR3 HTTP/1.1" 200 -
+2026-10-29 14:25:16,360 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:25:16,361 - INFO - Press CTRL+C to quit
+2026-10-29 14:25:16,362 - INFO -  * Restarting with stat
+2026-10-29 14:25:16,684 - WARNING -  * Debugger is active!
+2026-10-29 14:25:16,687 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:25:21,101 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:21] "GET / HTTP/1.1" 500 -
+2026-10-29 14:25:21,227 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:21] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+2026-10-29 14:25:21,230 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:21] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+2026-10-29 14:25:21,271 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:21] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=sJKySLif92CBsGIw2Ukn HTTP/1.1" 200 -
+2026-10-29 14:25:38,758 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:25:38,760 - INFO - Press CTRL+C to quit
+2026-10-29 14:25:38,761 - INFO -  * Restarting with stat
+2026-10-29 14:25:39,083 - WARNING -  * Debugger is active!
+2026-10-29 14:25:39,086 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:25:42,007 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:42] "GET / HTTP/1.1" 200 -
+2026-10-29 14:25:43,379 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:43] "GET /resume/contact HTTP/1.1" 200 -
+2026-10-29 14:25:44,348 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:44] "GET /products/ HTTP/1.1" 500 -
+2026-10-29 14:25:44,447 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:44] "GET /products/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-10-29 14:25:44,448 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:44] "GET /products/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-10-29 14:25:44,493 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:44] "GET /products/?__debugger__=yes&cmd=resource&f=console.png&s=bJYpOZmcnEx0prS3QevD HTTP/1.1" 200 -
+2026-10-29 14:25:44,499 - INFO - 127.0.0.1 - - [29/Oct/2026 14:25:44] "GET /products/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-10-29 14:26:15,364 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\Flask\\flask_app_rynder\\app\\products\\views.py', reloading
+2026-10-29 14:26:15,408 - INFO -  * Restarting with stat
+2026-10-29 14:26:15,756 - WARNING -  * Debugger is active!
+2026-10-29 14:26:15,759 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:30:13,137 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:30:13,137 - INFO - Press CTRL+C to quit
+2026-10-29 14:30:13,139 - INFO -  * Restarting with stat
+2026-10-29 14:30:13,494 - WARNING -  * Debugger is active!
+2026-10-29 14:30:13,499 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:30:15,393 - INFO - 127.0.0.1 - - [29/Oct/2026 14:30:15] "GET /products/ HTTP/1.1" 500 -
+2026-10-29 14:30:15,484 - INFO - 127.0.0.1 - - [29/Oct/2026 14:30:15] "GET /products/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+2026-10-29 14:30:15,489 - INFO - 127.0.0.1 - - [29/Oct/2026 14:30:15] "GET /products/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+2026-10-29 14:30:15,513 - INFO - 127.0.0.1 - - [29/Oct/2026 14:30:15] "GET /products/?__debugger__=yes&cmd=resource&f=console.png&s=06c8hQWAQ8gI3T02xFfh HTTP/1.1" 200 -
+2026-10-29 14:31:12,937 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\Flask\\flask_app_rynder\\app\\products\\views.py', reloading
+2026-10-29 14:31:12,978 - INFO -  * Restarting with stat
+2026-10-29 14:31:15,658 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:31:15,658 - INFO - Press CTRL+C to quit
+2026-10-29 14:31:15,659 - INFO -  * Restarting with stat
+2026-10-29 14:31:15,997 - WARNING -  * Debugger is active!
+2026-10-29 14:31:16,000 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:31:18,180 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:18] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:31:19,165 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:19] "GET /resume/contact HTTP/1.1" 200 -
+2026-10-29 14:31:20,266 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:20] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:31:21,617 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:21] "GET /resume/contact HTTP/1.1" 200 -
+2026-10-29 14:31:22,730 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:22] "GET /resume/contact HTTP/1.1" 200 -
+2026-10-29 14:31:23,504 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:23] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:31:24,647 - INFO - 127.0.0.1 - - [29/Oct/2026 14:31:24] "GET /homepage HTTP/1.1" 200 -
+2026-10-29 14:33:16,691 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:33:16,692 - INFO - Press CTRL+C to quit
+2026-10-29 14:33:16,693 - INFO -  * Restarting with stat
+2026-10-29 14:33:17,044 - WARNING -  * Debugger is active!
+2026-10-29 14:33:17,046 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:33:18,520 - INFO - 127.0.0.1 - - [29/Oct/2026 14:33:18] "GET /homepage HTTP/1.1" 200 -
+2026-10-29 14:33:19,640 - INFO - 127.0.0.1 - - [29/Oct/2026 14:33:19] "GET /products/ HTTP/1.1" 500 -
+2026-10-29 14:33:19,754 - INFO - 127.0.0.1 - - [29/Oct/2026 14:33:19] "GET /products/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+2026-10-29 14:33:19,755 - INFO - 127.0.0.1 - - [29/Oct/2026 14:33:19] "GET /products/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+2026-10-29 14:33:19,786 - INFO - 127.0.0.1 - - [29/Oct/2026 14:33:19] "GET /products/?__debugger__=yes&cmd=resource&f=console.png&s=yhuT1UUXOQBDbVnyVHtR HTTP/1.1" 200 -
+2026-10-29 14:34:51,166 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:34:51,167 - INFO - Press CTRL+C to quit
+2026-10-29 14:34:51,168 - INFO -  * Restarting with stat
+2026-10-29 14:34:51,495 - WARNING -  * Debugger is active!
+2026-10-29 14:34:51,498 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:34:53,047 - INFO - 127.0.0.1 - - [29/Oct/2026 14:34:53] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:34:54,101 - INFO - 127.0.0.1 - - [29/Oct/2026 14:34:54] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:34:54,857 - INFO - 127.0.0.1 - - [29/Oct/2026 14:34:54] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:35:24,754 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\Flask\\flask_app_rynder\\app\\products\\views.py', reloading
+2026-10-29 14:35:24,797 - INFO -  * Restarting with stat
+2026-10-29 14:35:25,148 - WARNING -  * Debugger is active!
+2026-10-29 14:35:25,151 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:35:27,181 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:35:27,185 - INFO - Press CTRL+C to quit
+2026-10-29 14:35:27,186 - INFO -  * Restarting with stat
+2026-10-29 14:35:27,523 - WARNING -  * Debugger is active!
+2026-10-29 14:35:27,526 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:35:30,009 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:30] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:35:32,151 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:32] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:35:33,497 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:33] "GET / HTTP/1.1" 200 -
+2026-10-29 14:35:34,354 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:34] "GET / HTTP/1.1" 200 -
+2026-10-29 14:35:35,179 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:35] "GET / HTTP/1.1" 200 -
+2026-10-29 14:35:36,166 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:36] "GET / HTTP/1.1" 200 -
+2026-10-29 14:35:49,207 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:49] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:35:50,373 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:50] "GET / HTTP/1.1" 200 -
+2026-10-29 14:35:51,500 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:51] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:35:52,019 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:52] "GET /resume/ HTTP/1.1" 200 -
+2026-10-29 14:35:52,103 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:52] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-10-29 14:35:52,106 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:52] "GET /static/images/avatar.png HTTP/1.1" 304 -
+2026-10-29 14:35:52,964 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:52] "GET / HTTP/1.1" 200 -
+2026-10-29 14:35:53,443 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:53] "GET /resume/ HTTP/1.1" 200 -
+2026-10-29 14:35:53,492 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:53] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-10-29 14:35:53,518 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:53] "GET /static/images/avatar.png HTTP/1.1" 304 -
+2026-10-29 14:35:53,757 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:53] "GET /resume/contact HTTP/1.1" 200 -
+2026-10-29 14:35:54,031 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:54] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:35:55,090 - INFO - 127.0.0.1 - - [29/Oct/2026 14:35:55] "GET /products/product/add HTTP/1.1" 200 -
+2026-10-29 14:36:14,047 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:14] "POST /products/product/add HTTP/1.1" 302 -
+2026-10-29 14:36:14,054 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:14] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:36:14,108 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:14] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 200 -
+2026-10-29 14:36:16,002 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:16] "GET /products/1 HTTP/1.1" 200 -
+2026-10-29 14:36:16,070 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:16] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
+2026-10-29 14:36:19,234 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:19] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:36:19,303 - INFO - 127.0.0.1 - - [29/Oct/2026 14:36:19] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
+2026-10-29 14:37:38,088 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:37:38,092 - INFO - Press CTRL+C to quit
+2026-10-29 14:37:38,093 - INFO -  * Restarting with stat
+2026-10-29 14:37:38,420 - WARNING -  * Debugger is active!
+2026-10-29 14:37:38,422 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:37:41,048 - INFO - 127.0.0.1 - - [29/Oct/2026 14:37:41] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:37:41,132 - INFO - 127.0.0.1 - - [29/Oct/2026 14:37:41] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
+2026-10-29 14:37:42,492 - INFO - 127.0.0.1 - - [29/Oct/2026 14:37:42] "GET / HTTP/1.1" 200 -
+2026-10-29 14:37:43,200 - INFO - 127.0.0.1 - - [29/Oct/2026 14:37:43] "GET / HTTP/1.1" 200 -
+2026-10-29 14:38:29,809 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\Flask\\flask_app_rynder\\app\\views.py', reloading
+2026-10-29 14:38:29,866 - INFO -  * Restarting with stat
+2026-10-29 14:38:30,203 - WARNING -  * Debugger is active!
+2026-10-29 14:38:30,206 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:38:37,153 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8080
+2026-10-29 14:38:37,155 - INFO - Press CTRL+C to quit
+2026-10-29 14:38:37,156 - INFO -  * Restarting with stat
+2026-10-29 14:38:37,491 - WARNING -  * Debugger is active!
+2026-10-29 14:38:37,497 - INFO -  * Debugger PIN: 895-480-001
+2026-10-29 14:38:39,863 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:39] "GET / HTTP/1.1" 200 -
+2026-10-29 14:38:40,993 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:40] "GET /homepage HTTP/1.1" 200 -
+2026-10-29 14:38:42,035 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:42] "GET / HTTP/1.1" 200 -
+2026-10-29 14:38:42,566 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:42] "GET /resume/ HTTP/1.1" 200 -
+2026-10-29 14:38:42,648 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:42] "GET /static/css/styles.css HTTP/1.1" 304 -
+2026-10-29 14:38:42,651 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:42] "GET /static/images/avatar.png HTTP/1.1" 304 -
+2026-10-29 14:38:44,305 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:44] "GET /resume/contact HTTP/1.1" 200 -
+2026-10-29 14:38:45,048 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:45] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:38:45,103 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:45] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
+2026-10-29 14:38:46,498 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:46] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:38:46,539 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:46] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
+2026-10-29 14:38:46,872 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:46] "GET /users/login HTTP/1.1" 200 -
+2026-10-29 14:38:47,453 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:47] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:38:47,505 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:47] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
+2026-10-29 14:38:47,718 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:47] "GET /users/login HTTP/1.1" 200 -
+2026-10-29 14:38:48,016 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:48] "GET /users/profile HTTP/1.1" 302 -
+2026-10-29 14:38:48,025 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:48] "GET /users/login HTTP/1.1" 200 -
+2026-10-29 14:38:48,606 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:48] "GET /products/ HTTP/1.1" 200 -
+2026-10-29 14:38:48,667 - INFO - 127.0.0.1 - - [29/Oct/2026 14:38:48] "GET /static/uploads/products/2fd4db15b6d544cba3b078b0824cc5e1.png HTTP/1.1" 304 -
