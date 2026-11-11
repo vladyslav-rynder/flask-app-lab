@@ -1,12 +1,12 @@
-from flask import abort, redirect, render_template, request, url_for
-from app import app
+from flask import Blueprint, abort, redirect, render_template, request, url_for
 
-@app.route('/')
+main_bp = Blueprint('main', __name__)
+
+@main_bp.route('/')
 def main():
     return render_template('index.html')
 
-@app.route('/homepage')
+@main_bp.route('/homepage')
 def home():
-    """View for the Home page of your website."""
     agent = request.user_agent
     return render_template('homepage.html', agent=agent)
