@@ -1,11 +1,9 @@
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-
+instance_dir = os.path.abspath(os.path.join(basedir, '../instance'))
 
 class Config:
-    """Базова конфігурація для всіх середовищ"""
-
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'rynder-key'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

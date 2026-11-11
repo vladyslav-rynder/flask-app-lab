@@ -7,7 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 migrate = Migrate()
 
-
 def create_app(config_name=None):
     if config_name is None:
         config_name = os.environ.get('FLASK_ENV', 'development')
@@ -26,16 +25,21 @@ def create_app(config_name=None):
     def page_not_found(e):
         return render_template('404.html'), 404
 
+    from app.posts.models import Post
     from app import views
     from app.products import product_bp
     from app.users import user_bp
     from app.resume import resume_bp
     from app.views import main_bp
 
+    from app.posts import post_bp
+
     app.register_blueprint(main_bp)
     app.register_blueprint(user_bp)
     app.register_blueprint(product_bp)
     app.register_blueprint(resume_bp)
+
+    app.register_blueprint(post_bp)
 
     return app
 
