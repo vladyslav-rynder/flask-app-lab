@@ -11,8 +11,11 @@ from flask import (
     url_for,
 )
 
-# Заглушка
-USER_DATA = {'username': 'user1', 'password': '123'}
+USERS_DATA = {
+    'user1': '123',
+    'admin': 'admin123',
+    'manager': 'secret-pass'
+}
 
 @user_bp.route('/hi/<string:name>')
 def greetings(name):
@@ -34,7 +37,7 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        if username == USER_DATA['username'] and password == USER_DATA['password']:
+        if username in USERS_DATA and USERS_DATA[username] == password:
             session['username'] = username
             flash('Успішний вхід!', 'success')
             return redirect(url_for('users.profile'))

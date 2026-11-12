@@ -13,6 +13,7 @@ def list_posts():
 def create_post():
     form = PostForm()
     if form.validate_on_submit():
+
         author_name = session.get("username", "Anonymous")
 
         post = Post(
@@ -20,6 +21,7 @@ def create_post():
             content=form.content.data,
             is_active=form.is_active.data,
             author=author_name,
+            posted=form.publish_date.data,
             category=form.category.data
         )
         db.session.add(post)
@@ -28,11 +30,6 @@ def create_post():
         return redirect(url_for("posts.list_posts"))
     return render_template("add_post.html", form=form, legend="New Post")
 
-@post_bp.route("/post/<int:id>", methods=["GET"])
-def detail_post(id):
-    post = db.get_or_404(Post, id)
-    return render_template("detail_post.html", post=post)
-
 @post_bp.route("/post/<int:id>/update", methods=["GET", "POST"])
 def update_post(id):
     post = db.session.get(Post, id)
@@ -40,14 +37,22 @@ def update_post(id):
         abort(404)
 
     form = PostForm(obj=post)
+    if request.method == 'GET' and post.posted:
+        form.publish_date.data = post.posted
 
     if form.validate_on_submit():
         form.populate_obj(post)
+        post.posted = form.publish_date.data
         db.session.commit()
         flash("Пост оновлено!", "success")
         return redirect(url_for("posts.detail_post", id=post.id))
 
     return render_template("add_post.html", form=form, legend="Редагувати пост")
+
+@post_bp.route("/post/<int:id>", methods=["GET"])
+def detail_post(id):
+    post = db.get_or_404(Post, id)
+    return render_template("detail_post.html", post=post)
 
 @post_bp.route("/post/<int:id>/delete", methods=["POST"])
 def delete_post(id):

@@ -12,22 +12,16 @@
                 <div class="mb-3">
                     {{ form.title.label(class="form-label") }}
                     {{ form.title(class="form-control") }}
-                    {% for error in form.title.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                    {% endfor %}
                 </div>
 
                 <div class="mb-3">
                     {{ form.content.label(class="form-label") }}
                     {{ form.content(class="form-control", rows="5") }}
-                    {% for error in form.content.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                    {% endfor %}
                 </div>
 
                 <div class="mb-3">
-                    {{ form.author.label(class="form-label") }}
-                    {{ form.author(class="form-control") }}
+                    {{ form.publish_date.label(class="form-label") }}
+                    {{ form.publish_date(class="form-control") }}
                 </div>
 
                 <div class="mb-3">
