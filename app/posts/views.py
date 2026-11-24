@@ -2,6 +2,7 @@ from flask import render_template, redirect, url_for, flash, abort, request, ses
 from app import db
 from app.posts import post_bp
 from app.posts.models import Post
+from app.posts.models import Tag
 from app.posts.forms import PostForm
 
 @post_bp.route("/post", methods=["GET"])
@@ -13,16 +14,18 @@ def list_posts():
 def create_post():
     form = PostForm()
     if form.validate_on_submit():
-
-        author_name = session.get("username", "Anonymous")
+        selected_tags = db.session.scalars(
+            db.select(Tag).where(Tag.id.in_(form.tags.data))
+        ).all()
 
         post = Post(
             title=form.title.data,
             content=form.content.data,
             is_active=form.is_active.data,
-            author=author_name,
             posted=form.publish_date.data,
-            category=form.category.data
+            category=form.category.data,
+            user_id=form.author_id.data,
+            tags=list(selected_tags),
         )
         db.session.add(post)
         db.session.commit()
@@ -37,12 +40,18 @@ def update_post(id):
         abort(404)
 
     form = PostForm(obj=post)
-    if request.method == 'GET' and post.posted:
-        form.publish_date.data = post.posted
+    if request.method == "GET":
+        if post.posted:
+            form.publish_date.data = post.posted
+        form.author_id.data = post.user_id
 
     if form.validate_on_submit():
-        form.populate_obj(post)
+        post.title = form.title.data
+        post.content = form.content.data
+        post.is_active = form.is_active.data
         post.posted = form.publish_date.data
+        post.category = form.category.data
+        post.user_id = form.author_id.data
         db.session.commit()
         flash("Пост оновлено!", "success")
         return redirect(url_for("posts.detail_post", id=post.id))

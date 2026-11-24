@@ -25,11 +25,14 @@ class PostTestCase(unittest.TestCase):
         response = self.client.get('/post')
         self.assertEqual(response.status_code, 200)
 
-    def test_create_post(self):
+    def test_create_post_with_session_author(self):
+        with self.client.session_transaction() as sess:
+            sess['username'] = 'test_user'
+
         response = self.client.post('/post/create', data={
             'title': 'Test Post',
             'content': 'Test Content',
-            'author': 'Tester',
+            'publish_date': '2026-11-12T12:00',
             'category': 'news',
             'is_active': True
         }, follow_redirects=True)
@@ -39,10 +42,10 @@ class PostTestCase(unittest.TestCase):
         post = Post.query.first()
         self.assertIsNotNone(post)
         self.assertEqual(post.title, 'Test Post')
-        self.assertEqual(post.content, 'Test Content')
+        self.assertEqual(post.author, 'test_user')
 
     def test_detail_post(self):
-        post = Post(title='Detail Title', content='Detail Content')
+        post = Post(title='Detail Title', content='Detail Content', author='Anonymous')
         db.session.add(post)
         db.session.commit()
 
@@ -50,14 +53,14 @@ class PostTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_update_post(self):
-        post = Post(title='Old Title', content='Old Content')
+        post = Post(title='Old Title', content='Old Content', author='Anonymous')
         db.session.add(post)
         db.session.commit()
 
         response = self.client.post(f'/post/{post.id}/update', data={
             'title': 'Updated Title',
             'content': 'Updated Content',
-            'author': 'Tester',
+            'publish_date': '2026-11-12T14:00',
             'category': 'tech',
             'is_active': True
         }, follow_redirects=True)
@@ -68,7 +71,7 @@ class PostTestCase(unittest.TestCase):
         self.assertEqual(updated_post.title, 'Updated Title')
 
     def test_delete_post(self):
-        post = Post(title='To Delete', content='Content')
+        post = Post(title='To Delete', content='Content', author='Anonymous')
         db.session.add(post)
         db.session.commit()
         post_id = post.id

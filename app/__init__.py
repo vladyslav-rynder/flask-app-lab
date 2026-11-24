@@ -3,8 +3,18 @@ from app.config import config_dict
 from flask import Flask, render_template
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import MetaData
 
-db = SQLAlchemy()
+naming_convention = {
+    "ix": "ix_%(column_0_label)s",
+    "uq": "uq_%(table_name)s_%(column_0_name)s",
+    "ck": "ck_%(table_name)s_%(constraint_name)s",
+    "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+    "pk": "pk_%(table_name)s",
+}
+
+metadata = MetaData(naming_convention=naming_convention)
+db = SQLAlchemy(metadata=metadata)
 migrate = Migrate()
 
 def create_app(config_name=None):
@@ -15,6 +25,7 @@ def create_app(config_name=None):
 
     current_config = config_dict.get(config_name, config_dict['default'])
     app.config.from_object(current_config)
+    app.config["SQLALCHEMY_ECHO"] = True
 
     os.makedirs(app.instance_path, exist_ok=True)
 
@@ -26,6 +37,8 @@ def create_app(config_name=None):
         return render_template('404.html'), 404
 
     from app.posts.models import Post
+    from app.posts.models import Tag
+    from app.users.models import User
     from app import views
     from app.products import product_bp
     from app.users import user_bp
